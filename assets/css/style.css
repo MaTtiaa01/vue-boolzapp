@@ -22,6 +22,8 @@ a{
     color: lightslategray
 }
 
+
+/* utilities */
 .app_container{
     height: 80vh;
     max-width: 1200px;
@@ -39,6 +41,17 @@ a{
 
 .avatar > img{
     border-radius: 50%;
+}
+
+.sent{
+    width: 40%;
+    margin-left: 50%;
+    margin-bottom: 1rem;
+}
+
+.recived{
+    width: 40%;
+    background-color: var(--bg-bool-message);
 }
 
 

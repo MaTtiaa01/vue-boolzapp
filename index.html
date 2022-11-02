@@ -16,7 +16,7 @@
                 <div class="left_head d-flex justify-content-between p-2 align-items-center">
                     <div class="user_data d-flex align-items-center">
                         <div class="avatar">
-                            <img src="./assets/img/avatar_2.jpg" alt="">
+                            <img src="./assets/img/avatar_6.jpg" alt="">
                         </div>
                         <div class="name fs-5">Sofia</div>
                     </div>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="left_body bg-white">
                     <div class="contacts">
-                        <div class="contact d-flex justify-content-between p-2" v-for="contact in contacts">
+                        <div class="contact d-flex justify-content-between p-2" v-for="(contact,i) in contacts" @click="setActiveIndex(i)">
                             <div class="user_data d-flex">
                                 <div class="avatar">
                                     <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">
@@ -59,10 +59,10 @@
                 <div class="right_head d-flex justify-content-between p-2 align-items-center">
                     <div class="user_chat d-flex">
                         <div class="avatar">
-                            <img src="./assets/img/avatar_1.jpg" alt="">
+                            <img :src="'./assets/img/avatar' + contacts[activeIndex].avatar + '.jpg' " alt="">
                         </div>
                         <div >
-                            <div class="name fs-5">Michele</div>
+                            <div class="name fs-5">{{contacts[activeIndex].name}}</div>
                             <div class="last_access">ultimo accesso oggi alle 12:00</div>
                         </div>
                     </div>
@@ -73,12 +73,14 @@
                     </div>
                 </div>
                 <div class="right_body">
-                    <div class="container">
-                        <div class="row row-cols-2">
-                            <div class="col recive">
+                    <div class="container py-4">
+                        <div class="chat" v-for="message in contacts[activeIndex].messages">
 
+                            <div v-if="(contacts[activeIndex].messages.length > 0)" class="card" :class="(message.status === 'sent' ? 'sent' : 'recived' )">
+                                <div class="message">{{message.message}}</div>
+                                <div class="message_hour">{{message.date}}</div>
                             </div>
-                            <div class="col send"></div>
+                            <div v-else class="empty">Non sono presenti messaggi in questa chat</div>
                         </div>
                     </div>
                 </div>
