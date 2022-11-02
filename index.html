@@ -39,7 +39,7 @@
                 </div>
                 <div class="left_body bg-white">
                     <div class="contacts">
-                        <div class="contact d-flex justify-content-between p-2" v-for="(contact,i) in contacts" @click="setActiveIndex(i)">
+                        <div class="contact d-flex justify-content-between p-2" v-for="(contact,i) in contacts" @click="setActiveIndex(i)" :class="(activeIndex === i ? 'active' : '' )">
                             <div class="user_data d-flex">
                                 <div class="avatar">
                                     <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">

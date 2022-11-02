@@ -53,7 +53,9 @@ a{
     width: 40%;
     background-color: var(--bg-bool-message);
 }
-
+.active{
+    background-color: var(--bg-bool-light);
+}
 
 
 
@@ -69,6 +71,9 @@ a{
 .left .left_body{
     height: 55vh;
     overflow-y: scroll;
+}
+.left .left_body .contacts .contact:hover{
+    background-color: var(--bg-bool-light);
 }
 
 .left .notification{
