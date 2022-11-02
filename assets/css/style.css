@@ -25,6 +25,15 @@ img{
     height: 100%;
 }
 
+.avatar{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.avatar > img{
+    border-radius: 50%;
+}
 
 
 
@@ -61,7 +70,7 @@ img{
 
 .right .right_body{
     height: 80%;
-    background-image: url(../img/sfondo-standard.jpeg);
+    background-image: url(../img/mine.jpg);
     background-size: cover;
 }
 
