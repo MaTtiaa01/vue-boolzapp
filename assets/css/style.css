@@ -3,7 +3,55 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --bg-bool-light: #e9ebeb;
+    --bg-bool-notification:#8edafc;
+    --bg-bool-message: #d5f9ba;
+    --bg-bool-lighter: white;
+
+}
 
 body{
-    background-color: red;
+    background-color: lightgoldenrodyellow;
 }
+img{
+    max-width: 100%;
+}
+
+.app_container{
+    height: 90vh;
+}
+.app_row{
+    height: 100%;
+}
+
+
+
+
+
+/* #region left */
+
+
+
+/* #endregion left */
+
+/* #region right */
+
+.right .right_head{
+    height: 10%;
+    background-color: var(--bg-bool-light);
+}
+
+.right .right_body{
+    height: 80%;
+    background-image: url(../img/sfondo-standard.jpeg);
+    background-size: cover;
+}
+
+.right .right_foot{
+    height: 10%;
+    background-color: var(--bg-bool-light);
+}
+
+
+/* #endregion right */
