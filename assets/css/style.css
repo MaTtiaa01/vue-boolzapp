@@ -30,8 +30,25 @@ img{
 
 
 /* #region left */
+.left{
+    border-right: 2px solid grey;
+}
+.left .left_head{
+    height: 10%;
+    background-color: var(--bg-bool-light);
+}
 
+.left .left_body{
+    height: 90%;
+}
 
+.left .notification{
+    background-color: var(--bg-bool-notification);
+}
+
+.left .contacts{
+    overflow-y: scroll;
+}
 
 /* #endregion left */
 
