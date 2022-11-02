@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Boolzapp</title>
   </head>
-  <body>
+  <body class="py-5">
     
-    <div class="container my-4 app_container p-0" id="app">
+    <div class="container app_container" id="app">
         <div class="row app_row g-0">
-            <div class="col-4 left ">
+            <div class="col-4 left">
                 <div class="left_head d-flex justify-content-between p-2">
                     <div class="user_data d-flex">
                         <div class="avatar">
@@ -26,18 +26,18 @@
                         <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                     </div>
                 </div>
+                <div class="notification">
+                    <div class="bell"></div>
+                    <div>
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <div class="search_bar d-flex p-2">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
                 <div class="left_body bg-white">
-                    <div class="notification">
-                        <div class="bell"></div>
-                        <div>
-                            <div>Ricevi notifiche di nuovi messaggi</div>
-                            <a href="#">Attiva notifiche desktop</a>
-                        </div>
-                    </div>
-                    <div class="search_bar d-flex p-2">
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
-                    </div>
                     <div class="contacts">
                         <div class="contact d-flex justify-content-between p-2" v-for="contact in contacts">
                             <div class="user_data d-flex">
