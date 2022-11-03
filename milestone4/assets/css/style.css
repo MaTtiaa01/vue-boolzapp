@@ -57,7 +57,8 @@ a{
 .active{
     background-color: var(--bg-bool-light);
 }
-.not_visible{
+
+.left .left_body .contact.not_visible{
     display: none;
 }
 

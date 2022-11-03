@@ -10,7 +10,7 @@ createApp({
                 {
                     name: 'Michele',
                     avatar: '_1',
-                    visible: false,
+                    visible: true,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -206,16 +206,17 @@ createApp({
                 
                 
             });
-            newArray.forEach((element)=>{
+            newArray.forEach((element,i)=>{
                 console.log(element);
                 //console.log(element.toString());
                 console.log(this.search);
                
-                if (element.includes(this.search)) {
+                if (element.includes(this.search.charAt())) {
                     console.log("sono dentro l'if");
-                    
+                    this.contacts[i].visible = true
                 }else{
                     console.log("sono dentro l'else");
+                    this.contacts[i].visible = false
                 }
                     
                 
