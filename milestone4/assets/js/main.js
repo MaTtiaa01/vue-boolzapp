@@ -10,7 +10,7 @@ createApp({
                 {
                     name: 'Michele',
                     avatar: '_1',
-                    visible: true,
+                    visible: false,
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
@@ -208,12 +208,16 @@ createApp({
             });
             newArray.forEach((element)=>{
                 console.log(element);
-                console.log(this.search.split(''));
-                // if ( element.includes(this.search.split(''))) {
-                //     console.log("sono dentro l'if");
-                // }else{
-                //     console.log("sono dentro l'else");
-                // }
+                console.log(this.search.split(""));
+                for (let i = 0; i < element.length; i++) {
+                    
+                    if (element[i].includes(this.search.split(""))) {
+                        console.log("sono dentro l'if");
+                        
+                    }else{
+                        console.log("sono dentro l'else");
+                    }
+                }
             })
         },
     }
