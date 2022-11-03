@@ -169,13 +169,22 @@ createApp({
                     ],
                 }
             ],
-            activeIndex : 0
+            activeIndex : 0,
+            newMessage : ""
         }
     },
     methods : {
         setActiveIndex(i){
             this.activeIndex = i
-        }
+        },
+        sendMessage(i){
+            const newObject = {
+                date: '10/01/2020 15:30:55',
+                message: this.newMessage,
+                status: 'sent'
+            }
+            this.contacts[i].messages.push(newObject)
+        },
     }
 }).mount("#app")
 

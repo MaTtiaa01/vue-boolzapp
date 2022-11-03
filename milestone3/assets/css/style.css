@@ -43,16 +43,17 @@ a{
     border-radius: 50%;
 }
 
-.sent{
+.sent, .recived{
     width: 40%;
+    padding: 0.5rem;
+}
+.sent{
     margin-left: 50%;
     margin-bottom: 1rem;
-}
-
-.recived{
-    width: 40%;
     background-color: var(--bg-bool-message);
 }
+
+
 .active{
     background-color: var(--bg-bool-light);
 }

@@ -87,7 +87,7 @@
                 <div class="right_foot d-flex justify-content-around px-2 py-4">
                     <div class="emoticon"><i class="fa-regular fa-face-smile fs-3"></i></div>
                     <div class="message" style="width:70%;">
-                        <input class="rounded-2" style="width:100%;" type="text" placeholder="Scrivi un messaggio">
+                        <input class="rounded-2" style="width:100%;" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage(activeIndex)">
                     </div>
                     <div class="audio"><i class="fa-solid fa-microphone fs-3"></i></div>
                 </div>
