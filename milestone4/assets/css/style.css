@@ -124,5 +124,16 @@ a{
     background-color: var(--bg-bool-light);
 }
 
+.right .right_foot .message{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right .right_foot .message > input{
+    width: 90%;
+}
+
+
 
 /* #endregion right */
