@@ -111,6 +111,10 @@ a{
     border: 1px solid var(--bg-bool-light);
 }
 
+.left .contact{
+    display: flex;
+}
+
 
 
 /* #endregion left */
