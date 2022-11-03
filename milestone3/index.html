@@ -76,7 +76,7 @@
                     <div class="container py-4">
                         <div class="chat" v-for="message in contacts[activeIndex].messages">
 
-                            <div v-if="(contacts[activeIndex].messages.length > 0)" class="card" :class="(message.status === 'sent' ? 'sent' : 'recived' )">
+                            <div v-if="(contacts[activeIndex].messages.length > 0)" class="card" :class="(message.status === 'sent' ? 'sent' : 'received' )">
                                 <div class="message">{{message.message}}</div>
                                 <div class="message_hour">{{message.date}}</div>
                             </div>

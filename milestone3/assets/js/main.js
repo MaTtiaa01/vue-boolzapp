@@ -178,12 +178,21 @@ createApp({
             this.activeIndex = i
         },
         sendMessage(i){
-            const newObject = {
+            const newObjectSent = {
                 date: '10/01/2020 15:30:55',
                 message: this.newMessage,
                 status: 'sent'
             }
-            this.contacts[i].messages.push(newObject)
+            const newObjectReceived = {
+                date: '10/01/2020 15:30:55',
+                message: "ok",
+                status: 'received'
+            }
+            this.contacts[i].messages.push(newObjectSent)
+            this.newMessage = ""
+            setTimeout(()=>{
+                this.contacts[i].messages.push(newObjectReceived)
+            },1000)
         },
     }
 }).mount("#app")
