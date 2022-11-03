@@ -8,7 +8,7 @@
     --bg-bool-notification:#8edafc;
     --bg-bool-message: #d5f9ba;
     --bg-bool-lighter: white;
-
+    --bg-bool-message-bar: #f3eeea;
 }
 
 body{
@@ -126,11 +126,12 @@ a{
     height: 60vh;
     background-image: url(../img/mine.jpg);
     background-size: cover;
+    background-size: auto;
 }
 
 .right .right_foot{
     height: 10vh;
-    background-color: var(--bg-bool-light);
+    background-color: var(--bg-bool-message-bar);
 }
 
 .right .right_foot .message{
