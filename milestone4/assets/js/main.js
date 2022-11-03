@@ -208,16 +208,17 @@ createApp({
             });
             newArray.forEach((element)=>{
                 console.log(element);
-                console.log(this.search.split(""));
-                for (let i = 0; i < element.length; i++) {
+                //console.log(element.toString());
+                console.log(this.search);
+               
+                if (element.includes(this.search)) {
+                    console.log("sono dentro l'if");
                     
-                    if (element[i].includes(this.search.split(""))) {
-                        console.log("sono dentro l'if");
-                        
-                    }else{
-                        console.log("sono dentro l'else");
-                    }
+                }else{
+                    console.log("sono dentro l'else");
                 }
+                    
+                
             })
         },
     }
