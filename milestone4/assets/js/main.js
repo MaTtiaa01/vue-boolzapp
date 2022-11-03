@@ -198,29 +198,19 @@ createApp({
         searchChat(){
             //vedere se name contiene i caratteri che ho scritto nell'input
             //se si setto visible su true altrimenti su false
-            const newArray = []
-            this.contacts.forEach((contact,i,) => {
-                //console.log(contact.name.split('')); 
-                newArray.push(contact.name.split(''))
-                //console.log(newArray);
-                
-                
-            });
-            newArray.forEach((element,i)=>{
-                console.log(element);
-                //console.log(element.toString());
-                console.log(this.search);
-               
-                if (element.includes(this.search.charAt())) {
+
+            this.contacts.forEach((contact,i) => { 
+                //console.log(this.contacts[i]); 
+                const lowerName = this.contacts[i].name.toLowerCase() 
+                if (lowerName.includes(this.search)) {
                     console.log("sono dentro l'if");
                     this.contacts[i].visible = true
                 }else{
                     console.log("sono dentro l'else");
                     this.contacts[i].visible = false
                 }
-                    
-                
-            })
+            });
+    
         },
     }
 }).mount("#app")
