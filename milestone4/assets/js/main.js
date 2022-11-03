@@ -202,17 +202,19 @@ createApp({
             this.contacts.forEach((contact,i,) => {
                 //console.log(contact.name.split('')); 
                 newArray.push(contact.name.split(''))
-                console.log(newArray);
-                for (let x = 0; x < newArray.length; x++) {
-                    const element = newArray[x];
-                    if ( element.includes(this.search.split(''))) {
-                        this.contacts[x].visible = true
-                    }else{
-                        this.contacts[x].visible = false
-                    }
-                   
-                }
+                //console.log(newArray);
+                
+                
             });
+            newArray.forEach((element)=>{
+                console.log(element);
+                console.log(this.search.split(''));
+                // if ( element.includes(this.search.split(''))) {
+                //     console.log("sono dentro l'if");
+                // }else{
+                //     console.log("sono dentro l'else");
+                // }
+            })
         },
     }
 }).mount("#app")
