@@ -9,10 +9,13 @@
     --bg-bool-message: #d5f9ba;
     --bg-bool-lighter: white;
     --bg-bool-message-bar: #f3eeea;
+    --bg-bool-secondary-background: #009688;
+    --bg-bool-primary-background:#dbdbd3;
 }
 
 body{
-    background-color: lightgoldenrodyellow;
+    background-image: linear-gradient(var(--bg-bool-secondary-background) 0% 25%, var(--bg-bool-primary-background )25%);
+    background-repeat: no-repeat;
 }
 img,i{
     max-width: 100%;
@@ -132,6 +135,7 @@ a{
     background-image: url(../img/mine.jpg);
     background-size: cover;
     background-size: auto;
+    overflow-y: auto;
 }
 
 .right .right_foot{
