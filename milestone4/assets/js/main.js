@@ -202,7 +202,7 @@ createApp({
             this.contacts.forEach((contact,i) => { 
                 //console.log(this.contacts[i]); 
                 const lowerName = this.contacts[i].name.toLowerCase() 
-                if (lowerName.includes(this.search)) {
+                if (lowerName.includes(this.search.toLowerCase())) {
                     console.log("sono dentro l'if");
                     this.contacts[i].visible = true
                 }else{
