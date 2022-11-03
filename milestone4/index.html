@@ -33,13 +33,13 @@
                         <a href="#">Attiva notifiche desktop</a>
                     </div>
                 </div>
-                <div class="search_bar d-flex p-2">
+                <div class="search_bar d-flex p-2 " @keyup.enter.prevent="searchChat()">
                     <button @click="searchChat()"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
                 </div>
                 <div class="left_body bg-white">
                     <div class="contacts">
-                        <div class="contact justify-content-between p-2" v-for="(contact,i) in contacts" @click="setActiveIndex(i)" :class="[activeIndex === i ? 'active' : '' , contact.visible === false ? 'not_visible' : ''  ] "  >
+                        <div class="contact justify-content-between p-2" v-for="(contact,i) in contacts" @click.prevent="setActiveIndex(i)" :class="[activeIndex === i ? 'active' : '' , contact.visible === false ? 'not_visible' : ''  ] "  >
                             <div class="user_data d-flex" >
                                 <div class="avatar">
                                     <img :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">
@@ -87,7 +87,7 @@
                 <div class="right_foot d-flex justify-content-around align-items-center px-2 py-4">
                     <div class="emoticon"><i class="fa-regular fa-face-smile fs-3"></i></div>
                     <div class="message">
-                        <input class="rounded-2"  type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage(activeIndex)">
+                        <input class="rounded-2"  type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter.prevent="sendMessage(activeIndex)">
                     </div>
                     <div class="audio"><i class="fa-solid fa-microphone fs-3"></i></div>
                 </div>
