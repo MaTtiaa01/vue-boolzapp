@@ -172,7 +172,7 @@ createApp({
             activeIndex : 0,
             newMessage : "",
             search : "",
-            menu : false,
+            //menu : false,
         }
     },
     methods : {
@@ -213,9 +213,9 @@ createApp({
             });
     
         },
-        setMessageMenu(x){
-            let cardEl = document.querySelectorAll(".right_body .card")
-            console.log(cardEl[x]);
+        setMessageMenu(activeIndex,x){
+            // let cardEl = document.querySelectorAll(".right_body .card")
+            // console.log(cardEl[x]);
             // let counter = 0;
             // counter++
             // if (counter  = 1) {
@@ -226,7 +226,10 @@ createApp({
             //     console.log("sono dentro l'else");
             // }
             // counter++
-            this.menu = true
+            console.log(this.contacts[activeIndex].messages[0]);
+            this.contacts[activeIndex].messages[0].menu = true;
+            console.log(this.contacts[activeIndex].messages[0]);
+            //this.menu = true
         },
     }
 }).mount("#app")
