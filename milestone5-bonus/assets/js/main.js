@@ -231,8 +231,9 @@ createApp({
             this.contacts[activeIndex].messages[x].message = "This message has been deleted";
             let messageEl = document.querySelectorAll(".right_body .message")
             console.log(messageEl[x]);
-            //messageEl[x].innerHTML = `<div class="d-none"></div>`
-            //this.contacts[activeIndex].messages[x] = {}
+            setTimeout(()=> {
+                messageEl[x].classList.add("d-none")
+            },1000)
             
         }
     }
