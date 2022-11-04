@@ -1,6 +1,5 @@
 
 
-
 const {createApp} = Vue;
 
 createApp({
@@ -179,13 +178,16 @@ createApp({
             this.activeIndex = i
         },
         sendMessage(i){
+            var DateTime = luxon.DateTime;
+            const dt = DateTime.now();
+            console.log(dt);    
             const newObjectSent = {
-                date: '10/01/2020 15:30:55',
+                date: `${dt.hour}:${dt.minute}` ,
                 message: this.newMessage,
                 status: 'sent'
             }
             const newObjectReceived = {
-                date: '10/01/2020 15:30:55',
+                date: `${dt.hour}:${dt.minute}` ,
                 message: "ok",
                 status: 'received'
             }
@@ -222,10 +224,16 @@ createApp({
             //console.log(this.contacts[activeIndex].messages[x]);
         },
         deleteMessage(activeIndex,x){
-            this.contacts[activeIndex].messages[x].message = "This message has been deleted"
+            this.contacts[activeIndex].messages[x].message = "This message has been deleted";
+            let messageEl = document.querySelectorAll(".right_body .message")
+            console.log(messageEl[x]);
+            //messageEl[x].innerHTML = `<div class="d-none"></div>`
+            //this.contacts[activeIndex].messages[x] = {}
+            
         }
     }
 }).mount("#app")
+
 
 
 
