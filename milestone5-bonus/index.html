@@ -76,8 +76,18 @@
                     <div class="container py-4">
                         <div class="chat d-flex flex-column p-4" >
 
-                            <div v-if="(contacts[activeIndex].messages.length > 0)" v-for="(message,x) in contacts[activeIndex].messages" class="card d-flex" :class="(message.status === 'sent' ? 'sent' : 'received' )" @click.stop="setMessageMenu(activeIndex,x)">
-                                <div class="message justify-content-between"><span>{{message.message}} </span>  <span  v-show="contacts[activeIndex].messages[x].menu"><i class="fa-solid fa-chevron-down"></i></span></div>
+                            <div v-if="(contacts[activeIndex].messages.length > 0)" v-for="(message,x) in contacts[activeIndex].messages" class="card d-flex position-relative" :class="(message.status === 'sent' ? 'sent' : 'received' )" @click.stop="setMessageMenu(activeIndex,x)">
+                                <div class="message justify-content-between"><span>{{message.message}} </span>  
+                                    <span class="ms-2  dropdown_span" v-show="contacts[activeIndex].messages[x].menu">
+                                        <i class="fa-solid fa-chevron-down position-absolute dropdown_i"></i>
+                                        <div class="dropdown_menu ">
+                                            <ul class="dropdown_list m-0">
+                                                <li><a href="#">Message info</a></li>
+                                                <li><a href="#">Delete message</a></li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </div>
                                 <div class="message_hour">{{message.date}}</div>
                                
                             </div>

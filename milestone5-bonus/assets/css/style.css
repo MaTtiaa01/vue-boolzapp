@@ -139,6 +139,35 @@ a{
     background-size: auto;
     overflow-y: auto;
 }
+.right .right_body .dropdown_i{
+    top: 0.5rem;
+    right: 0.3rem;
+}
+.right .right_body .dropdown_menu{
+    background-color: var(--bg-bool-lighter);
+    width: 200px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.right .right_body .dropdown_menu .dropdown_list{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.right .right_body .dropdown_menu .dropdown_list li{
+    padding: 0.5rem 2rem;
+}
+
+.right .right_body .dropdown_menu .dropdown_list a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
 
 .right .right_foot{
     height: 10vh;
@@ -154,6 +183,7 @@ a{
 .right .right_foot .message > input{
     width: 90%;
 }
+
 
 
 
