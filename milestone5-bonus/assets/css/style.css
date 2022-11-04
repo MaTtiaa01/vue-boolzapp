@@ -48,6 +48,8 @@ a{
 
 .sent, .received{
     padding: 0.5rem 1rem;
+    max-width: 300px;
+    min-width: 200px;
 }
 .sent{
     align-self: flex-end;
