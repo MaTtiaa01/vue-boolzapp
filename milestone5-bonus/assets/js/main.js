@@ -213,8 +213,19 @@ createApp({
             });
     
         },
-        setMessageMenu(i){
-            
+        setMessageMenu(x){
+            let cardEl = document.querySelectorAll(".right_body .card")
+            console.log(cardEl[x]);
+            // let counter = 0;
+            // counter++
+            // if (counter  = 1) {
+            //     cardEl[x].insertAdjacentHTML("beforeend",`<div class="dropdown"><i class="fa-solid fa-chevron-down"></i></div>`)
+            //     console.log("sono dentro l'if");
+            // }else{
+            //     cardEl = ""
+            //     console.log("sono dentro l'else");
+            // }
+            // counter++
             this.menu = true
         },
     }

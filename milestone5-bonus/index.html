@@ -74,9 +74,9 @@
                 </div>
                 <div class="right_body">
                     <div class="container py-4">
-                        <div class="chat" v-for="message in contacts[activeIndex].messages">
+                        <div class="chat" v-for="(message,x) in contacts[activeIndex].messages">
 
-                            <div v-if="(contacts[activeIndex].messages.length > 0)" class="card d-flex" :class="(message.status === 'sent' ? 'sent' : 'received' )" @click.prevent="setMessageMenu(x)">
+                            <div v-if="(contacts[activeIndex].messages.length > 0)" class="card d-flex" :class="(message.status === 'sent' ? 'sent' : 'received' )" @click.stop="setMessageMenu(x)">
                                 <div class="message">{{message.message}}</div>
                                 <div v-show="menu">hi</div>
                                 <div class="message_hour">{{message.date}}</div>
