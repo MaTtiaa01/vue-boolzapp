@@ -171,6 +171,7 @@ createApp({
             activeIndex : 0,
             newMessage : "",
             search : "",
+            hour : "",
         }
     },
     methods : {
@@ -196,6 +197,9 @@ createApp({
             setTimeout(()=>{
                 this.contacts[i].messages.push(newObjectReceived)
             },1000)
+
+            this.hour = `${dt.hour}:${dt.minute}`
+           
         },
         searchChat(){
             //vedere se name contiene i caratteri che ho scritto nell'input
