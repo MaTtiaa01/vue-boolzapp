@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-bool-light: #e9ebeb;
+    --bg-bool-notification:#8edafc;
+    --bg-bool-message: #d5f9ba;
+    --bg-bool-lighter: white;
+    --bg-bool-message-bar: #f3eeea;
+    --bg-bool-secondary-background: #009688;
+    --bg-bool-primary-background:#dbdbd3;
+}
+
+body{
+    background-image: linear-gradient(to bottom, var(--bg-bool-secondary-background) 0% 25%, var(--bg-bool-primary-background )25% 100%);
+    background-attachment: fixed;
+}
+img,i{
+    max-width: 100%;
+}
+
+a{
+    color: lightslategray
+}
+
+
+/* utilities */
+.app_container{
+    height: 80vh;
+    max-width: 1200px;
+}
+.app_row{
+    height: 100%;
+}
+
+.avatar{
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.avatar > img{
+    border-radius: 50%;
+}
+
+.sent, .received{
+    width: 40%;
+    padding: 0.5rem;
+}
+.sent{
+    margin-left: 50%;
+    margin-bottom: 1rem;
+    background-color: var(--bg-bool-message);
+}
+
+
+.active{
+    background-color: var(--bg-bool-light);
+}
+
+.left .left_body .contact.not_visible{
+    display: none;
+}
+
+
+
+/* #region left */
+.left{
+    border-right: 2px solid grey;
+}
+.left .left_head{
+    height: 10vh;
+    background-color: var(--bg-bool-light);
+}
+
+.left .left_body{
+    height: 55vh;
+    overflow-y: scroll;
+}
+.left .left_body .contacts .contact:hover{
+    background-color: var(--bg-bool-light);
+}
+
+.left .notification{
+    background-color: var(--bg-bool-notification);
+    height: 10vh;
+}
+
+.left .notification .bell{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--bg-bool-lighter);
+}
+#stop_notification{
+    color: var(--bg-bool-notification);
+}
+.left .search_bar{
+    height: 5vh;
+    background-color: var(--bg-bool-lighter);
+}
+
+.left .search_bar > button{
+    width: 20%;
+    background-color:var(--bg-bool-lighter);
+    border: 1px solid var(--bg-bool-light);
+}
+
+.left .search_bar > input{
+    width: 80%;
+    background-color: var(--bg-bool-lighter);
+    border: 1px solid var(--bg-bool-light);
+}
+
+.left .contact{
+    display: flex;
+}
+
+
+
+/* #endregion left */
+
+/* #region right */
+
+.right .right_head{
+    height: 10vh;
+    background-color: var(--bg-bool-light);
+}
+
+.right .right_body{
+    height: 60vh;
+    background-image: url(../img/mine.jpg);
+    background-size: cover;
+    background-size: auto;
+    overflow-y: auto;
+}
+
+.right .right_foot{
+    height: 10vh;
+    background-color: var(--bg-bool-message-bar);
+}
+
+.right .right_foot .message{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right .right_foot .message > input{
+    width: 90%;
+}
+
+
+
+/* #endregion right */
