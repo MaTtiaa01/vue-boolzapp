@@ -74,11 +74,11 @@
                 </div>
                 <div class="right_body">
                     <div class="container py-4">
-                        <div class="chat" v-for="(message,x) in contacts[activeIndex].messages">
+                        <div class="chat" >
 
-                            <div v-if="(contacts[activeIndex].messages.length > 0)" class="card d-flex" :class="(message.status === 'sent' ? 'sent' : 'received' )" @click.stop="setMessageMenu(x)">
+                            <div v-if="(contacts[activeIndex].messages.length > 0)" v-for="(message,x) in contacts[activeIndex].messages" class="card d-flex" :class="(message.status === 'sent' ? 'sent' : 'received' )" @click.stop="setMessageMenu(activeIndex,x)">
                                 <div class="message">{{message.message}}</div>
-                                <div v-show="contacts[activeIndex].messages[0].menu">hi</div>
+                                <div v-show="contacts[activeIndex].messages[x].menu">hi</div>
                                 <div class="message_hour">{{message.date}}</div>
                             </div>
                             <div v-else class="empty">Non sono presenti messaggi in questa chat</div>

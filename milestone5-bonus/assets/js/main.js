@@ -172,7 +172,6 @@ createApp({
             activeIndex : 0,
             newMessage : "",
             search : "",
-            //menu : false,
         }
     },
     methods : {
@@ -214,22 +213,13 @@ createApp({
     
         },
         setMessageMenu(activeIndex,x){
-            // let cardEl = document.querySelectorAll(".right_body .card")
-            // console.log(cardEl[x]);
-            // let counter = 0;
-            // counter++
-            // if (counter  = 1) {
-            //     cardEl[x].insertAdjacentHTML("beforeend",`<div class="dropdown"><i class="fa-solid fa-chevron-down"></i></div>`)
-            //     console.log("sono dentro l'if");
-            // }else{
-            //     cardEl = ""
-            //     console.log("sono dentro l'else");
-            // }
-            // counter++
-            console.log(this.contacts[activeIndex].messages[0]);
-            this.contacts[activeIndex].messages[0].menu = true;
-            console.log(this.contacts[activeIndex].messages[0]);
-            //this.menu = true
+            console.log(this.contacts[activeIndex].messages[x]);
+            if (this.contacts[activeIndex].messages[x].menu === true) {
+                this.contacts[activeIndex].messages[x].menu = false
+            }else{
+                this.contacts[activeIndex].messages[x].menu = true
+            }
+            console.log(this.contacts[activeIndex].messages[x]);
         },
     }
 }).mount("#app")
