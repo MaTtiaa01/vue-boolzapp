@@ -171,7 +171,7 @@ createApp({
             activeIndex : 0,
             newMessage : "",
             search : "",
-            hour : "",
+            
         }
     },
     methods : {
@@ -197,8 +197,8 @@ createApp({
             setTimeout(()=>{
                 this.contacts[i].messages.push(newObjectReceived)
             },1000)
-
-            this.hour = `${dt.hour}:${dt.minute}`
+            this.contacts[i].hour = `${dt.hour}:${dt.minute}`
+            
            
         },
         searchChat(){
