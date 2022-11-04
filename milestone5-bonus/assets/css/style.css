@@ -47,13 +47,15 @@ a{
 }
 
 .sent, .received{
-    width: 40%;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
 }
 .sent{
-    margin-left: 50%;
+    align-self: flex-end;
     margin-bottom: 1rem;
     background-color: var(--bg-bool-message);
+}
+.received{
+    align-self: flex-start;
 }
 
 

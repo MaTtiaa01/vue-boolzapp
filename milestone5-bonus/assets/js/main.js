@@ -213,13 +213,13 @@ createApp({
     
         },
         setMessageMenu(activeIndex,x){
-            console.log(this.contacts[activeIndex].messages[x]);
+            //console.log(this.contacts[activeIndex].messages[x]);
             if (this.contacts[activeIndex].messages[x].menu === true) {
                 this.contacts[activeIndex].messages[x].menu = false
             }else{
                 this.contacts[activeIndex].messages[x].menu = true
             }
-            console.log(this.contacts[activeIndex].messages[x]);
+            //console.log(this.contacts[activeIndex].messages[x]);
         },
     }
 }).mount("#app")
