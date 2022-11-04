@@ -139,10 +139,7 @@ a{
     background-size: auto;
     overflow-y: auto;
 }
-.right .right_body .dropdown_i{
-    top: 0.5rem;
-    right: 0.3rem;
-}
+
 .right .right_body .dropdown_menu{
     background-color: var(--bg-bool-lighter);
     width: 200px;
@@ -150,7 +147,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
+    z-index: 900;
 }
 
 .right .right_body .dropdown_menu .dropdown_list{

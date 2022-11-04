@@ -221,6 +221,9 @@ createApp({
             }
             //console.log(this.contacts[activeIndex].messages[x]);
         },
+        deleteMessage(activeIndex,x){
+            this.contacts[activeIndex].messages[x].message = "This message has been deleted"
+        }
     }
 }).mount("#app")
 
